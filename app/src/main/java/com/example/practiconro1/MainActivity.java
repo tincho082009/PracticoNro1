@@ -3,6 +3,7 @@ package com.example.practiconro1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         uc = new UsbConectado();
         registerReceiver(uc, new IntentFilter("android.hardware.usb.action.USB_STATE"));
+
+        //android.hardware.usb.action.USB_STATE
     }
 
     @Override
