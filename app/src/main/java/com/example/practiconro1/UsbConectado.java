@@ -17,7 +17,7 @@ public class UsbConectado extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if(intent.getExtras().getBoolean("connected")) {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:2664841705"));
+            callIntent.setData(Uri.parse("tel:911"));
             if(ActivityCompat.checkSelfPermission(context.getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
